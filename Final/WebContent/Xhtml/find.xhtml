@@ -28,17 +28,18 @@
 			</h:panelGrid>
 		</p:panel>
 	</h:form>
-
-	<p:dataTable value="${monitorBean.monitores}" var="monitor" rules="rows">
-		<f:facet name="caption">Lista de Monitores  
-               </f:facet>
-		<f:facet name="footer">Fim da listagem</f:facet>
-		<p:column>
-			<f:facet name="header">Nome</f:facet>#{monitor.nome}  
-               </p:column>
-		<p:column>
-			<f:facet name="header">Horario</f:facet>#{monitor.horario}  
-               </p:column>
-		</p:dataTable>
+	<p:outputPanel autoUpdate="true">
+		<p:dataTable value="${monitorBean.monitores}" var="monitor" rules="rows">
+			<f:facet name="caption">Lista de Monitores  
+	               </f:facet>
+			<f:facet name="footer">Fim da listagem</f:facet>
+			<p:column>
+				<f:facet name="header">Nome</f:facet>#{monitor.nome}  
+	               </p:column>
+			<p:column>
+				<f:facet name="header">Horario</f:facet>#{monitor.horario}  
+	               </p:column>
+			</p:dataTable>
+		</p:outputPanel>
 </h:body>
 </html>
