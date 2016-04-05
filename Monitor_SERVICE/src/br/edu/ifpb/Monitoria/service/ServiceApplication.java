@@ -14,6 +14,7 @@ public class ServiceApplication extends Application {
 		
 		// Serviços		
 		this.singletons.add(new MonitorController());
+		this.singletons.add(new CoordenadorController());
 		this.singletons.add(new RecursoQuadro());
 	}
 

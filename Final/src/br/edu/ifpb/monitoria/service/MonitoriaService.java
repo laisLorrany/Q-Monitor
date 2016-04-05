@@ -7,6 +7,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
+import br.edu.ifpb.monitoria.entidade.Coordenador;
 import br.edu.ifpb.monitoria.entidade.Monitor;
 
 
@@ -43,5 +44,17 @@ public interface MonitoriaService {
 	@Consumes("application/json")
 	@Produces("application/json")
 	public List<Monitor>cadastrarMonitor(Monitor monitor);
+
+	@POST
+	@Path("/coordenador/logar")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public boolean logarCoordenador(Coordenador coordenador);	
+
+	@POST
+	@Path("/coordenador/disciplina/pesquisar")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public List<Coordenador> pesquisarCoordenadorDisciplina(Coordenador coordenador);
 	
 }

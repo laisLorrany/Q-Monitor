@@ -106,7 +106,7 @@ public class Monitor {
 	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
-
+/*
 	public void cadastra() {
 		Gson gson = new Gson();
 		Response response = null;
@@ -135,5 +135,5 @@ public class Monitor {
 				}.getType());
 		
 		return monitores;
-	}
+	}*/
 }
