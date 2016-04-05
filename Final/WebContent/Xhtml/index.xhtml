@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+
+</h:head>
+<h:body>
+
+	<form>
+	    <p:panel id="panel"> 
+	 
+	        <h:panelGrid columns="3" cellpadding="5">
+	            <p:outputLabel  value="Cadastrar Monitor:" />	            
+				<p:button outcome="cadastro" value="Cadastrar">
+					<f:param name="cadastro" value="10"/>
+				</p:button>
+				
+			</h:panelGrid>
+			
+	 		<h:panelGrid columns="3" cellpadding="5">
+	            <p:outputLabel value="Procurar Monitor:" />
+	            
+				<p:button outcome="find" value="Procurar">
+					<f:param name="cadastro" value="10"/>
+				</p:button> 
+	 
+	        </h:panelGrid>
+	 
+	      </p:panel>
+	</form>
+	
+</h:body>
+</html>

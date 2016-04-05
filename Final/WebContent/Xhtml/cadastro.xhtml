@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cadastro de Monitores</title>
+</h:head>
+<h:body>
+	<h:form>
+		 <p:panel id="panel"> 
+			<p:messages id="messages" showDetail="true" autoUpdate="true"
+						closable="true" />
+		 
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Nome: " />
+					<p:inputText value="${monitorBean.monitor.nome}" required="true"/>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Login: " />
+					<p:inputText value="${monitorBean.monitor.login}" required="true"/>
+	       	 	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Senha: " />
+        			<p:password id="senha" value="${monitorBean.monitor.senha}" required="true"/>
+	        	</h:panelGrid>
+					
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Matricula: " />
+					<p:inputText value="${monitorBean.monitor.matricula}" required="true"/>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Horario: " />
+					<p:inputText value="${monitorBean.monitor.horario}" required="true"/>
+	        	</h:panelGrid>
+				
+		        <h:panelGrid columns="3" cellpadding="5">
+					<h:outputText value="Disciplina: " />
+					<p:inputText value="${monitorBean.monitor.disciplina}" required="true"/>
+	        	</h:panelGrid>						
+		
+		        <h:panelGrid>
+					<p:commandButton id="cadastrar" action="#{monitorBean.cadastrar}"
+						value="Cadastrar" />	
+		        </h:panelGrid>
+	 
+	      </p:panel>
+	</h:form>
+
+</h:body>
+</html>

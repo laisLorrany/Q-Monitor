@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Encontre Monitores</title>
+
+</h:head>
+<h:body>
+
+	<h:form>
+		<p:panel id="panel"> 
+			<p:messages id="messages" showDetail="true" autoUpdate="true"
+						closable="true" />
+		
+			<h:panelGrid columns="3" cellpadding="5">
+				<h:outputText value="Disciplina: " />
+				<p:inputText value="${monitorBean.monitor.disciplina}"/>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="3" cellpadding="5">
+			<p:commandButton id="find" action="#{monitorBean.listar}"
+				value="Procurar" />
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+
+	<p:dataTable value="${monitorBean.monitores}" var="monitor" rules="rows">
+		<f:facet name="caption">Lista de Monitores  
+               </f:facet>
+		<f:facet name="footer">Fim da listagem</f:facet>
+		<p:column>
+			<f:facet name="header">Nome</f:facet>#{monitor.nome}  
+               </p:column>
+		<p:column>
+			<f:facet name="header">Horario</f:facet>#{monitor.horario}  
+               </p:column>
+		</p:dataTable>
+</h:body>
+</html>
